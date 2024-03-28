@@ -1,4 +1,6 @@
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
+
+import Swal from "sweetalert2";
 
 
 const AddCoffee = () => {
@@ -31,7 +33,7 @@ const AddCoffee = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
-            if(data.insertedID){
+            if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',
                     text: 'New buyer of Bing Cafe',
