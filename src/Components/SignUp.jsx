@@ -16,7 +16,7 @@ const SignUp = () => {
             console.log(result.user);
             // new user
             const user = { email };
-            fetch('http://localhost:5000/user',{
+            fetch('https://coffee-store-server-qjlsts5kc-ggturans-projects.vercel.app/user',{
                 method:'POST',
                 headers:{
                     'content-type': 'application/json'

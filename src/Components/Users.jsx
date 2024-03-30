@@ -7,7 +7,7 @@ const Users = () => {
 
   const handleDelete = id => {
     // make sure user is confirmed to 
-    fetch(`http://localhost:5000/user/${id}`,{
+    fetch(`https://coffee-store-server-qjlsts5kc-ggturans-projects.vercel.app/user/${id}`,{
         method: 'DELETE'
     })
     .then(res=>res.json())
@@ -33,6 +33,7 @@ const Users = () => {
               <th>Users</th>
               <th>Email</th>
               <th>ID</th>
+              <th>Last Logged In</th>
               <th>Action</th>
               
             </tr>
@@ -43,7 +44,9 @@ const Users = () => {
                 users.map(user =>    
                 <tr key={user._id}>
                     <th>{user.email}</th>
+                    <td>{user.email}</td>
                     <td>{user._id}</td>
+                    <td></td>
                     <td>
                         <button 
                         onClick={() => handleDelete(user._id)}
